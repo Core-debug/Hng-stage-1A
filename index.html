@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Todo Card</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <main class="main">
+        <article class="container" data-testid="test-todo-card">
+            <div class="priority-row" data-testid="test-todo-priority-indicator">
+                <strong class="priority-tag" data-testid="test-todo-priority">Low</strong>
+                <strong class="status-tag" data-testid="test-todo-status">
+                    <select data-testid="test-todo-status-control" id="status">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Done">Done</option>
+                    </select>
+                </strong>
+            </div>
+
+            <header>
+                <h2 class="todo-title" data-testid="test-todo-title">Stage 1 Task</h2>
+            </header>
+
+            <div id="collapsible-content" class="Collaspe-container collapsed"
+                data-testid="test-todo-collapsible-section">
+                <p class="description" data-testid="test-todo-description">
+                    Extend the Stage 0 card with stateful logic, editable content, and dynamic time handling.
+                </p>
+            </div>
+
+            <button class="col-btn" id="expand-toggle" data-testid="test-todo-expand-toggle" aria-expanded="false"
+                aria-controls="collapsible-content">
+                Show more
+            </button>
+
+            <time class="time-info" datetime="2026-04-17">
+                <span class="date-now" data-testid="test-todo-due-date">📅 Due Apr 17, 2026</span>
+                <span class="date-remain" data-testid="test-todo-time-remaining">⏳ 5 days left</span>
+            </time>
+
+            <ul class="tag-list" role="list" data-testid="test-todo-tags">
+                <li data-testid="test-todo-tag-work">#Work</li>
+                <li data-testid="test-todo-tag-urgent">#Urgent</li>
+            </ul>
+
+            <div class="actions">
+                <div class="checkbox-group">
+                    <input type="checkbox" class="task" id="task-complete" data-testid="test-todo-complete-toggle">
+                    <label for="task-complete">Complete</label>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-icon edit" aria-label="Edit task" data-testid="test-todo-edit-button">✏️</button>
+                    <button class="btn-icon delete" aria-label="Delete task"
+                        data-testid="test-todo-delete-button">🗑️</button>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
